@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-header {
+/* header {
     background: #000;
     color: #fff;
     display: flex;
@@ -33,7 +33,67 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+} */
+
+/* General styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000; /* Dark background for a futuristic look */
+    color: #fff;
 }
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #ff00ff; /* Futuristic color for the logo */
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #ff00ff; /* Highlight on hover */
+}
+
+.nav-links li img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
 
 .hero {
     background: #222;
