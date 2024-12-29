@@ -4,38 +4,6 @@ body {
     padding: 0;
 }
 
-/* header {
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e000ff;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin-left: 2rem;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-} */
-
-/* General styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -79,6 +47,30 @@ header {
     height: 24px;
     vertical-align: middle;
 }
+
+/* General styling for the navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Adds spacing between the items */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for individual links */
+.nav-links li {
+    display: flex;
+    align-items: center; /* Ensures all list items align correctly */
+}
+
+/* Styling for the LinkedIn icon */
+.social-icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Ensures it's a square */
+    display: inline-block; /* Keeps it inline with text */
+}
+
 
 /* Mobile responsive */
 @media (max-width: 768px) {
