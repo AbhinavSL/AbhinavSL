@@ -1,197 +1,210 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #000; /* Dark background for a futuristic look */
-    color: #fff;
+    padding: 20px 50px;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: #ff00ff; /* Futuristic color for the logo */
-}
-
-.logo h1 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Navigation styles */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover,
-.nav-links li a:focus {
-    color: #ff00ff; /* Highlight on hover */
-}
-
-.nav-links li img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-}
-
-/* General styling for the navigation links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-    gap: 20px; /* Adds spacing between the items */
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling for individual links */
-.nav-links li {
-    display: flex;
-    align-items: center; /* Ensures all list items align correctly */
-}
-
-/* Styling for the LinkedIn icon */
-.social-icon {
-    width: 24px; /* Adjust the size as needed */
-    height: 24px; /* Ensures it's a square */
-    display: inline-block; /* Keeps it inline with text */
-}
-
-.gradient-logo {
-    font-size: 1.4rem;
-    font-weight: extra-bold;
-    background: linear-gradient(45deg, red, purple);
-    background-clip: text;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff005a, #6d00ff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+    background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
     text-decoration: none;
-}
-
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-}
-
-
-.hero {
-    background: #222;
     color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff005a;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 5rem 1rem;
+    padding: 100px 20px;
+    background: #1a1a1a;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 48px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff005a, #6d00ff);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0 0;
+    font-size: 18px;
 }
 
-.about, .portfolio {
-    padding: 3rem 1rem;
+/* About Section */
+#about {
+    padding: 50px 20px;
     text-align: center;
+    background: #181818;
 }
 
-.about h2, .portfolio h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff005a;
 }
 
-.about .content {
+.about-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
-.about .content img {
+.about-content img {
     width: 150px;
     height: 150px;
-    margin-right: 2rem;
+    border-radius: 50%;
+    border: 4px solid #ff005a;
 }
 
-.about .content div {
+.about-content p {
+    font-size: 18px;
     max-width: 600px;
-    text-align: left;
 }
 
-.about .content button {
-    background: #444;
-    color: #fff;
+.resume-button {
+    padding: 10px 20px;
     border: none;
-    padding: 0.5rem 1rem;
+    background: #ff005a;
+    color: #fff;
     cursor: pointer;
-    margin-top: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.portfolio .projects {
+.resume-button:hover {
+    background: #e6004d;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #6d00ff;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    width: 300px;
+    height: 200px;
+    background: #262626;
+    border: 2px solid #6d00ff;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-}
-
-.portfolio .projects .project {
-    width: 200px;
-    height: 200px;
-    background: #ccc;
-}
-
-footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 2rem;
-}
-
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    transition: transform 0.3s;
 }
 
-footer ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.project:hover {
+    transform: scale(1.05);
 }
 
-footer ul li {
-    margin-left: 1rem;
+.project img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-footer ul li a {
-    color: #fff;
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+    background: #181818;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff005a;
+}
+
+.contact-details {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-links a {
     text-decoration: none;
+    color: #6d00ff;
+    transition: color 0.3s;
 }
 
-footer p {
-    margin: 0;
+.contact-links a:hover {
+    color: #ff005a;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #000;
+    font-size: 14px;
+    color: #ccc;
+}
+
+footer a {
+    text-decoration: none;
+    color: #6d00ff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff005a;
 }
